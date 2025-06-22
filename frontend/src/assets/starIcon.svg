@@ -1,0 +1,26 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6b59ff"/>
+      <stop offset="50%" style="stop-color:#5044E5"/>
+      <stop offset="100%" style="stop-color:#3d35b8"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Star 1 - Largest -->
+  <path d="M32 8 L36.5 23.5 L52 23.5 L39.75 33 L44.25 48.5 L32 39 L19.75 48.5 L24.25 33 L12 23.5 L27.5 23.5 Z" 
+        fill="url(#starGradient)" 
+        stroke="#5044E5" 
+        stroke-width="1" 
+        stroke-linejoin="round"/>
+        
+  <!-- Star 2 - Medium -->
+  <path d="M56 16 L58 22 L64 22 L59.5 26 L61.5 32 L56 28.5 L50.5 32 L52.5 26 L48 22 L54 22 Z" 
+        fill="#5044E5" 
+        opacity="0.8"/>
+        
+  <!-- Star 3 - Smallest -->
+  <path d="M8 44 L9 46.5 L11.5 47 L9.5 48.5 L10 51 L8 49.5 L6 51 L6.5 48.5 L4.5 47 L7 46.5 Z" 
+        fill="#5044E5" 
+        opacity="0.6"/>
+</svg>
