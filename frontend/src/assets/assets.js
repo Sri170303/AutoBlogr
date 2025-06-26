@@ -18,6 +18,10 @@ import blogPic13 from './blogPic13.png'
 import blogPic14 from './blogPic14.png'
 import blogPic15 from './blogPic15.png'
 import blogPic16 from './blogPic16.png'
+import userIcon from  './userIcon.svg'
+import FacebookIcon from './FacebookIcon.svg'
+import InstagramIcon from './InstagramIcon.svg'
+import TwitterIcon from './TwitterIcon.svg'
 
 export const assets = {
     logo,
@@ -39,7 +43,11 @@ export const assets = {
     blogPic13,
     blogPic14,
     blogPic15, 
-    blogPic16
+    blogPic16,
+    userIcon,
+    FacebookIcon,
+    InstagramIcon,
+    TwitterIcon
 }
 
 export const blogCategories = ['All', 'Technology', 'Startup', 'Lifestyle', 'Finance']
@@ -49,7 +57,15 @@ export const blogData = [
     _id: "b8df37c3c94c4234bc4c6226",
     title: "The Rise of AI Agents",
     subTitle: "How AI Agents Are Reshaping Workflows and Human Collaboration",
-    description: "<h1>The Rise of AI Agents</h1><p>This blog post provides an insightful look into the rise of ai agents and how it affects your world today. We break down steps, benefits, and key takeaways you can implement.</p>",
+    description: `<h1>The Rise of AI Agents</h1>
+    <p>This blog post provides an insightful look into the rise of AI agents and how they are transforming workflows and human collaboration. We break down steps, benefits, and key takeaways you can implement.</p>
+    <ol>
+      <li><strong>Automation of repetitive tasks:</strong> Discover how AI agents can handle routine operations, allowing professionals to focus on higher-value work.</li>
+      <li><strong>Enhanced decision-making:</strong> Learn how AI-driven insights support faster and more accurate business decisions.</li>
+      <li><strong>Seamless human-AI collaboration:</strong> Understand how AI agents integrate with teams to complement human skills rather than replace them.</li>
+      <li><strong>Scalability and adaptability:</strong> Explore how AI agents can easily scale with organizational growth and adapt to changing needs.</li>
+    </ol>`,
+
     category: "Technology",
     image: blogPic1,
     createdAt: "2025-06-23T08:00:00Z",
@@ -238,7 +254,168 @@ export const blogData = [
     isPublished: true
   }
 ];
-
+ export const commentsData = [
+  {
+    "_id": "02a2554341e8419bbaac584d",
+    "blog": blogData[0],
+    "name": "Oscar Martinez",
+    "content": "Great writing and very informative.",
+    "isApproved": true,
+    "createdAt": "2025-04-30T09:30:06.918Z",
+    "updatedAt": "2025-04-30T09:30:06.918Z",
+    "__v": 0
+  },
+  {
+    "_id": "62a7b72096e545b2a6f26dfd",
+    "blog": blogData[1],
+    "name": "Kevin Malone",
+    "content": "This is a very insightful article. Thanks for sharing!",
+    "isApproved": false,
+    "createdAt": "2025-04-30T09:35:06.918Z",
+    "updatedAt": "2025-04-30T09:35:06.918Z",
+    "__v": 0
+  },
+  {
+    "_id": "8b3ceb3f3fe3460dae12003c",
+    "blog": blogData[2],
+    "name": "Jim Halpert",
+    "content": "Loved this post. Looking forward to more content like this.",
+    "isApproved": true,
+    "createdAt": "2025-04-30T09:40:06.918Z",
+    "updatedAt": "2025-04-30T09:40:06.918Z",
+    "__v": 0
+  },
+  {
+    "_id": "6b7e6ec3fd4d46bda2cfc412",
+    "blog": blogData[3],
+    "name": "Michael Scott",
+    "content": "This gave me a lot to think about. Appreciate it!",
+    "isApproved": false,
+    "createdAt": "2025-04-30T09:45:06.918Z",
+    "updatedAt": "2025-04-30T09:45:06.918Z",
+    "__v": 0
+  },
+  {
+    "_id": "8078d45e81d044edb3e0c1bd",
+    "blog": blogData[4],
+    "name": "Pam Beesly",
+    "content": "Very helpful and well explained.",
+    "isApproved": true,
+    "createdAt": "2025-04-30T09:50:06.918Z",
+    "updatedAt": "2025-04-30T09:50:06.918Z",
+    "__v": 0
+  },
+  {
+    "_id": "91ea6bcce2194a15a5873754",
+    "blog": blogData[5],
+    "name": "Michael Scott",
+    "content": "Loved this post. Looking forward to more content like this.",
+    "isApproved": true,
+    "createdAt": "2025-04-30T09:55:06.918Z",
+    "updatedAt": "2025-04-30T09:55:06.918Z",
+    "__v": 0
+  },
+  {
+    "_id": "e8ef4cd6bccf420e8b68ed13",
+    "blog": blogData[6],
+    "name": "Dwight Schrute",
+    "content": "This is a very insightful article. Thanks for sharing!",
+    "isApproved": false,
+    "createdAt": "2025-04-30T10:00:06.918Z",
+    "updatedAt": "2025-04-30T10:00:06.918Z",
+    "__v": 0
+  },
+  {
+    "_id": "9a741c122ebf4b63a8ba3d44",
+    "blog": blogData[7],
+    "name": "Kevin Malone",
+    "content": "Loved this post. Looking forward to more content like this.",
+    "isApproved": false,
+    "createdAt": "2025-04-30T10:05:06.918Z",
+    "updatedAt": "2025-04-30T10:05:06.918Z",
+    "__v": 0
+  },
+  {
+    "_id": "caac7076846b4b18829cc09f",
+    "blog": blogData[8],
+    "name": "Stanley Hudson",
+    "content": "Very helpful and well explained.",
+    "isApproved": false,
+    "createdAt": "2025-04-30T10:10:06.918Z",
+    "updatedAt": "2025-04-30T10:10:06.918Z",
+    "__v": 0
+  },
+  {
+    "_id": "5312828d71cb45b2bb3030d1",
+    "blog": blogData[9],
+    "name": "Pam Beesly",
+    "content": "Interesting perspective. I hadn’t thought of it that way.",
+    "isApproved": true,
+    "createdAt": "2025-04-30T10:15:06.918Z",
+    "updatedAt": "2025-04-30T10:15:06.918Z",
+    "__v": 0
+  },
+  {
+    "_id": "5613f2938eb24881bd0d28a6",
+    "blog": blogData[10],
+    "name": "Pam Beesly",
+    "content": "Great writing and very informative.",
+    "isApproved": false,
+    "createdAt": "2025-04-30T10:20:06.918Z",
+    "updatedAt": "2025-04-30T10:20:06.918Z",
+    "__v": 0
+  },
+  {
+    "_id": "f5b7f57f23084d0e8fcfec84",
+    "blog": blogData[11],
+    "name": "Kevin Malone",
+    "content": "This is a very insightful article. Thanks for sharing!",
+    "isApproved": false,
+    "createdAt": "2025-04-30T10:25:06.918Z",
+    "updatedAt": "2025-04-30T10:25:06.918Z",
+    "__v": 0
+  },
+  {
+    "_id": "9df11918f0eb4320a5c9fbcc",
+    "blog": blogData[12],
+    "name": "Michael Scott",
+    "content": "Great writing and very informative.",
+    "isApproved": true,
+    "createdAt": "2025-04-30T10:30:06.918Z",
+    "updatedAt": "2025-04-30T10:30:06.918Z",
+    "__v": 0
+  },
+  {
+    "_id": "423730f3f67f4236b2e877a6",
+    "blog": blogData[13],
+    "name": "Pam Beesly",
+    "content": "Loved this post. Looking forward to more content like this.",
+    "isApproved": false,
+    "createdAt": "2025-04-30T10:35:06.918Z",
+    "updatedAt": "2025-04-30T10:35:06.918Z",
+    "__v": 0
+  },
+  {
+    "_id": "511c5b12ee184669bcd08368",
+    "blog": blogData[14],
+    "name": "Stanley Hudson",
+    "content": "Loved this post. Looking forward to more content like this.",
+    "isApproved": false,
+    "createdAt": "2025-04-30T10:40:06.918Z",
+    "updatedAt": "2025-04-30T10:40:06.918Z",
+    "__v": 0
+  },
+  {
+    "_id": "59cd5d483e6e450c870cae51",
+    "blog": blogData[15],
+    "name": "Angela Martin",
+    "content": "This is a very insightful article. Thanks for sharing!",
+    "isApproved": true,
+    "createdAt": "2025-04-30T10:45:06.918Z",
+    "updatedAt": "2025-04-30T10:45:06.918Z",
+    "__v": 0
+  }
+];
 
 export const footerData = [
       {
