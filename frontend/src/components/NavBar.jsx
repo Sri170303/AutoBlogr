@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 const NavBar = () => {
   const navigate = useNavigate();
   return (
-    <div className='flex justify-between items-center py-5 mx-8 sm:mx-20 xl:mx-32'>
+    <div className='flex justify-between items-center py-5 px-8 sm:px-20 xl:px-32 bg-gray-200 border-b border-gray-500'>
         <img onClick={() => navigate('/')} src={assets.logo} alt="logo" className='w-32 sm:w-44 cursor-pointer'/>
         <button onClick={() => navigate('/admin')} className='flex flex-center gap-2 bg-primary py-2 px-4 rounded-2xl text-white cursor-pointer'>
           Login

@@ -22,6 +22,10 @@ import userIcon from  './userIcon.svg'
 import FacebookIcon from './FacebookIcon.svg'
 import InstagramIcon from './InstagramIcon.svg'
 import TwitterIcon from './TwitterIcon.svg'
+import homeIcon from './homeIcon.svg'
+import addIcon from './addIcon.svg'
+import commentIcon from './commentIcon.svg'
+import listIcon from './listIcon.svg'
 
 export const assets = {
     logo,
@@ -47,7 +51,11 @@ export const assets = {
     userIcon,
     FacebookIcon,
     InstagramIcon,
-    TwitterIcon
+    TwitterIcon,
+    homeIcon,
+    addIcon,
+    commentIcon,
+    listIcon
 }
 
 export const blogCategories = ['All', 'Technology', 'Startup', 'Lifestyle', 'Finance']
