@@ -26,6 +26,11 @@ import homeIcon from './homeIcon.svg'
 import addIcon from './addIcon.svg'
 import commentIcon from './commentIcon.svg'
 import listIcon from './listIcon.svg'
+import dashBoardIcon1 from './dashBoardIcon1.svg'
+import dashBoardIcon2 from './dashBoardIcon2.svg'
+import dashBoardIcon3 from './dashBoardIcon3.svg'
+import dashBoardIcon4 from './dashBoardIcon4.svg'
+import crossIcon from './crossIcon.svg'
 
 export const assets = {
     logo,
@@ -55,7 +60,12 @@ export const assets = {
     homeIcon,
     addIcon,
     commentIcon,
-    listIcon
+    listIcon,
+    dashBoardIcon1,
+    dashBoardIcon2,
+    dashBoardIcon3,
+    dashBoardIcon4,
+    crossIcon
 }
 
 export const blogCategories = ['All', 'Technology', 'Startup', 'Lifestyle', 'Finance']
@@ -439,3 +449,10 @@ export const footerData = [
           links: ["Instagram", "Twitter", "Facebook", "YouTube"]
       }
 ];
+
+export const dashboard_data = {
+    "blogs": 10,
+    "comments": 5,
+    "drafts": 0,
+    "recentBlogs": blogData.slice(0, 5),
+}
