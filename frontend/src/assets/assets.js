@@ -33,6 +33,7 @@ import dashBoardIcon4 from './dashBoardIcon4.svg'
 import crossIcon from './crossIcon.svg'
 import tickIcon from './tickIcon.svg'
 import binIcon from './binIcon.svg'
+import uploadArea from './uploadArea.svg'
 
 export const assets = {
     logo,
@@ -69,7 +70,8 @@ export const assets = {
     dashBoardIcon4,
     crossIcon,
     tickIcon,
-    binIcon
+    binIcon,
+    uploadArea
 }
 
 export const blogCategories = ['All', 'Technology', 'Startup', 'Lifestyle', 'Finance']
