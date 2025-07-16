@@ -1,9 +1,48 @@
 import React from 'react'
 import { assets } from '../../assets/assets';
+import { useAppContext } from '../../../context/AppContext';
+import toast from 'react-hot-toast';
 
 const BlogTableItem = ({blog, fetchBlogs, index}) => {
     const {title, createdAt} = blog;
-    const BlogDate = new Date(createdAt)
+    const BlogDate = new Date(createdAt);
+
+    const {axios} = useAppContext();
+
+    const deleteBlog = async () => {
+        const confirm = window.confirm('This is irreversible. Please Confirm.');
+        if (!confirm) return;
+
+        try {
+            const {data} = await axios.post('/api/blog/delete', {id: blog._id});
+            if (data.success) {
+                toast.success(data.message);
+                await fetchBlogs();
+            }
+            else {
+                toast.error(data.message);
+            }
+        }
+        catch (error) {
+            toast.error(error.message);
+        }
+    }
+
+    const togglePublish = async () => {
+        try {
+            const {data} = await axios.post('/api/blog/toggle-Publish/', {id: blog._id});
+            if (data.success) {
+                toast.success(data.message);
+                await fetchBlogs();
+            }
+            else {
+                toast.error(data.message);
+            }
+            } catch (error) {
+                toast.error(error.message);
+            }
+    }
+
   return (
     <tr className='border border-gray-400'>
         <th className='px-2 py-4'>{index}</th>
@@ -15,10 +54,10 @@ const BlogTableItem = ({blog, fetchBlogs, index}) => {
             </p>
         </td>
         <td className='px-2 py-4 flex text-xs gap-3'>
-            <button className='border px-2 py-0.5 mt-1 rounded cursor-pointer'>
+            <button onClick={togglePublish} className='border px-2 py-0.5 mt-1 rounded cursor-pointer'>
                 {blog.isPublished ? 'Unpublish' : 'Publish'}
             </button>
-            <img src={assets.crossIcon} className='w-8 border border-gray-400 rounded hover:scale-110 transition-all cursor-pointer' alt="" />
+            <img onClick={deleteBlog} src={assets.crossIcon} className='w-8 border border-gray-400 rounded hover:scale-110 transition-all cursor-pointer' alt="" />
         </td>
     </tr>
   )
